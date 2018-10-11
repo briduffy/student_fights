@@ -1,28 +1,24 @@
 <html>
   <head>
-    <style>
-      h1 {
-        text-align: center;
-      }
-
-      #loading_zone {
-        border: solid 1px black;
-        min-height: 100px;
-        width: 300px;
-        cursor: pointer;
-      }
-    </style>
     <title>Student Fights</title>
+    <link rel='stylesheet' href='./styles.css'/>
   </head>
 
   <body>
-    <div>
-      <h1>Student Fights</h1>
-      <div id='loading_zone'>
-        <label id='load_students'>Load Students</label>
-        <ul id='students'>
-        </ul>
+    <h1>Student Fights</h1>
+
+    <div id='loading_zone' class='left'>
+      <label id='load_students'>Load Students</label>
+      <ul id='students'>
+      </ul>
+    </div>
+
+    <div id='fight_zone' class='left'>
+      <div id='left'>
+      </div>
+      <div id='right'>
       </div>
     </div>
+    <script src='./main.js'></script>
   </body>
 </html>

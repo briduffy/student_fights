@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.avatar {
+  border-radius: 100%;
+  margin-left: 25%;
+  margin-top: 10%;
+  height: 120px;
+  width: 120px;
+}
+
+.fight-box {
+  width: 300px;
+  height: 300px;
+  background-color: #98FB98;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+#fight_zone {
+  margin-left: 14%;
+}
+
+#loading_zone {
+  border: solid 1px black;
+  min-height: 100px;
+  width: 300px;
+  cursor: pointer;
+}
