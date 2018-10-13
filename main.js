@@ -25,13 +25,9 @@ function selectStudents() {
   return [left, right]
 }
 
-function createAvatar(position, student) {
-  return "<h5 id='fighter_" + position + "' data-name='" + student.name + "' data-avatar='" + student.avatar + "' class='center fighter'>" + student.name + "</h5><img class='avatar' alt='student avatar' src='" + student.avatar + "'/>"
-}
-
 function placeFighters(fighting) {
-  var left = createAvatar('left', fighting[0])
-  var right = createAvatar('right', fighting[1])
+  var left = Avatar('left', fighting[0])
+  var right = Avatar('right', fighting[1])
   var leftBox = document.getElementById('left')
   var rightBox = document.getElementById('right')
   leftBox.innerHTML = left;
@@ -64,5 +60,30 @@ function pullStudents() {
   }
 }
 
+function winner(position){
+  var fighter = document.getElementById('fighter_' + position)
+  var data = fighter.dataset
+  var label = document.getElementById('winner')
+  label.innerHTML = "Winner:" + data.name 
+  students.push(data)
+    if (students.length !== 1) {
+    var fighting = selectStudents()
+    placeFighters(fighting)
+    else {
+      var avatar = Avatar(position, data);
+      var div = document.createElement('div')
+      div.className =  'winner'
+      div.innerHTML = avatar
+      var left = document.getElementById('left')
+      var right = document.getElementById('right')
+      var fightZone = document.getElementById('fight-zone')
+
+    }
+}
+
 var button = document.getElementById('loading_zone')
+var leftFighter = document.getElementById('left')
+var rightFighter = document.getElementById('right')
 button.addEventListener('click', pullStudents)
+leftFighter.addEventListener('click', function() { winner('left') })
+rightFighter.addEventListener('click', function() { winner('right') })

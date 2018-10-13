@@ -2,6 +2,10 @@ h1 {
   text-align: center;
 }
 
+.green {
+  color: #00FF00;
+}
+
 .left {
   float: left;
 }
